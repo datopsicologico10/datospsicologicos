@@ -1,23 +1,35 @@
 import { useEffect, useState } from 'react';
-import { TrendingUp, Zap, AlertTriangle, Clock, Target, BookOpen } from 'lucide-react';
+import { TrendingUp, Zap, AlertTriangle, Clock, Target, BookOpen, RefreshCw } from 'lucide-react';
 
 export default function ResearchInsights() {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const [running, setRunning] = useState(false);
+  const [runMsg, setRunMsg] = useState(null);
 
-  useEffect(() => {
+  const loadInsights = () => {
+    setLoading(true);
     fetch('/api/research/insights')
       .then((r) => r.json())
+      .then((json) => { setData(json.data); setLoading(false); })
+      .catch(() => setLoading(false));
+  };
+
+  useEffect(() => { loadInsights(); }, []);
+
+  const triggerResearch = () => {
+    setRunning(true);
+    setRunMsg(null);
+    fetch('/api/research/run', { method: 'POST' })
+      .then((r) => r.json())
       .then((json) => {
-        setData(json.data);
-        setLoading(false);
+        setRunMsg(json.message);
+        setRunning(false);
+        // Recarga los insights después de 2 minutos
+        setTimeout(loadInsights, 120000);
       })
-      .catch((err) => {
-        setError(err.message);
-        setLoading(false);
-      });
-  }, []);
+      .catch(() => setRunning(false));
+  };
 
   if (loading) {
     return (
@@ -54,10 +66,27 @@ export default function ResearchInsights() {
             Basado en datos reales de YouTube · Actualizado {new Date(generatedAt).toLocaleDateString('es-ES')}
           </p>
         </div>
-        <span className="text-xs bg-emerald-500/20 text-emerald-400 px-3 py-1 rounded-full border border-emerald-500/30">
-          Datos reales
-        </span>
+        <div className="flex items-center gap-2">
+          <span className="text-xs bg-emerald-500/20 text-emerald-400 px-3 py-1 rounded-full border border-emerald-500/30">
+            Datos reales
+          </span>
+          <button
+            onClick={triggerResearch}
+            disabled={running}
+            className="flex items-center gap-1.5 text-xs bg-slate-700 hover:bg-slate-600 disabled:opacity-50 text-slate-200 px-3 py-1.5 rounded-lg transition-all"
+          >
+            <RefreshCw size={12} className={running ? 'animate-spin' : ''} />
+            {running ? 'Analizando...' : 'Actualizar'}
+          </button>
+        </div>
       </div>
+
+      {/* Mensaje de investigación en curso */}
+      {runMsg && (
+        <div className="rounded-lg bg-indigo-500/10 border border-indigo-500/30 px-4 py-2 text-sm text-indigo-300">
+          ⏳ {runMsg} — el dashboard se actualizará automáticamente.
+        </div>
+      )}
 
       {/* Hallazgos clave */}
       <div className="rounded-xl border border-indigo-500/30 bg-indigo-500/5 p-4">

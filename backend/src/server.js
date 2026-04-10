@@ -168,6 +168,13 @@ app.get('/api/videos/local', (_req, res) => {
   res.json({ ok: true, data: videos });
 });
 
+// Fuerza una nueva investigación viral en background
+app.post('/api/research/run', (_req, res) => {
+  const { runViralResearch } = require('./queue/video-processor');
+  runViralResearch('manual trigger').catch(() => {});
+  res.json({ ok: true, message: 'Investigación iniciada en background (~2 min)' });
+});
+
 // Devuelve los últimos insights generados
 app.get('/api/research/insights', (_req, res) => {
   const insightsPath = path.resolve('./data/insights.json');
