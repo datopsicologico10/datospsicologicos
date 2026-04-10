@@ -23,6 +23,7 @@ const { synthesizeVoice } = require('../services/voice-synthesizer');
 const { renderVideo } = require('../services/video-renderer');
 const { publishAll } = require('../services/publisher');
 const { saveVideo, pollAllMetrics } = require('../services/analytics-tracker');
+const { notifyVideoPublished, notifyJobFailed } = require('../services/telegram-notifier');
 const themes = require('../templates/visual-themes.json');
 const logger = require('../utils/logger');
 
@@ -155,6 +156,9 @@ async function processPipeline(job) {
   logger.info(`[Job ${job.id}] Done! Published to: ${results.map((r) => r.platform).join(', ') || 'none'}`);
   if (errors.length > 0) logger.warn(`[Job ${job.id}] Publish errors: ${JSON.stringify(errors)}`);
 
+  // Notificación Telegram
+  await notifyVideoPublished({ script, results, errors, videoId });
+
   return job.result;
 }
 
@@ -188,6 +192,7 @@ async function addVideoToQueue(data = {}) {
       job.error = err.message;
       job.failedAt = new Date().toISOString();
       moveJob(DIRS.active, DIRS.failed, job);
+      await notifyJobFailed({ jobId: job.id, error: err.message });
     }
   });
 

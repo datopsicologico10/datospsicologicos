@@ -190,6 +190,22 @@ app.get('/api/research/insights', (_req, res) => {
 });
 
 // ─────────────────────────────────────────────
+//  FRONTEND ESTÁTICO (build de producción)
+// ─────────────────────────────────────────────
+
+const frontendDist = path.resolve(__dirname, '../../frontend/dist');
+if (fs.existsSync(frontendDist)) {
+  app.use(express.static(frontendDist));
+  // SPA fallback — cualquier ruta no-API sirve index.html
+  app.get('*', (req, res) => {
+    if (!req.path.startsWith('/api')) {
+      res.sendFile(path.join(frontendDist, 'index.html'));
+    }
+  });
+  logger.info(`Frontend serving from: ${frontendDist}`);
+}
+
+// ─────────────────────────────────────────────
 //  ERROR HANDLER
 // ─────────────────────────────────────────────
 
