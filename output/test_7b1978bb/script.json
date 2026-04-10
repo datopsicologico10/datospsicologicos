@@ -1,0 +1,34 @@
+{
+  "title": "cerebro_miente_cada_dia_sesgos",
+  "topic": "cognitive_biases",
+  "hook": "Tu cerebro te miente exactamente de esta forma cada día sin que lo notes.",
+  "claim": "El 90% de tus decisiones diarias no son racionales. Tu mente usa atajos mentales que distorsionan la realidad constantemente sin pedirte permiso.",
+  "explanation": "Se llama sesgo de confirmación. Un estudio de Harvard reveló que tu cerebro filtra la información para confirmar lo que ya crees. Ignora datos que te contradicen y acepta solo los que le dan la razón. Esto significa que tus opiniones, tus miedos y tus juicios sobre los demás están manipulando tu visión del mundo cada segundo. Nunca ves la realidad completa. Solo ves tu versión.",
+  "cta": "Sigue esta cuenta para descubrir más secretos increíbles de tu mente. ¿Te ha pasado?",
+  "durationSeconds": 50,
+  "keywords": [
+    "sesgo cognitivo",
+    "cerebro",
+    "manipulando",
+    "decisiones",
+    "secreto"
+  ],
+  "emotionalTrigger": "curiosity",
+  "hashtags": [
+    "#psicologia",
+    "#mentalidad",
+    "#cerebro",
+    "#hechos",
+    "#viral"
+  ],
+  "viralityScore": 62,
+  "viralityBreakdown": {
+    "hookStrength": 0,
+    "emotionalTrigger": 24,
+    "relatability": 13,
+    "loopPotential": 15,
+    "durationBonus": 10
+  },
+  "approved": true,
+  "estimatedWords": 116
+}

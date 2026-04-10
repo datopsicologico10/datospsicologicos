@@ -1,0 +1,86 @@
+{
+  "structure": {
+    "totalDuration": 58,
+    "sections": [
+      {
+        "name": "hook",
+        "startTime": 0,
+        "endTime": 3,
+        "duration": 3,
+        "purpose": "Captar atención — statement controvertido o pregunta",
+        "textStyle": "large_impact",
+        "fontSize": 82,
+        "fontWeight": "extrabold",
+        "animation": "zoom_in"
+      },
+      {
+        "name": "claim",
+        "startTime": 3,
+        "endTime": 15,
+        "duration": 12,
+        "purpose": "Afirmar el claim principal con datos o estadística",
+        "textStyle": "standard",
+        "fontSize": 72,
+        "fontWeight": "bold",
+        "animation": "fade_in"
+      },
+      {
+        "name": "explanation",
+        "startTime": 15,
+        "endTime": 45,
+        "duration": 30,
+        "purpose": "Explicar el porqué con ejemplos concretos",
+        "textStyle": "standard",
+        "fontSize": 68,
+        "fontWeight": "bold",
+        "animation": "slide_up"
+      },
+      {
+        "name": "cta",
+        "startTime": 45,
+        "endTime": 58,
+        "duration": 13,
+        "purpose": "Call to action — pregunta para comentar o seguir",
+        "textStyle": "emphasis",
+        "fontSize": 74,
+        "fontWeight": "extrabold",
+        "animation": "pulse"
+      }
+    ]
+  },
+  "videoSpec": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 60,
+    "codec": "libx264",
+    "preset": "fast",
+    "crf": 23,
+    "pixelFormat": "yuv420p",
+    "audioCodec": "aac",
+    "audioBitrate": "192k",
+    "audioSampleRate": 44100
+  },
+  "subtitleConfig": {
+    "font": "Montserrat-Bold",
+    "baseFontSize": 72,
+    "highlightColor": "#FFD700",
+    "normalColor": "#FFFFFF",
+    "strokeColor": "#000000",
+    "strokeWidth": 4,
+    "boxBackground": "black@0.45",
+    "boxPadding": 12,
+    "positionY": 0.72,
+    "wordsPerBlock": 3
+  },
+  "musicConfig": {
+    "volume": 0.18,
+    "fadeInDuration": 1.5,
+    "fadeOutDuration": 2.0
+  },
+  "logoConfig": {
+    "position": "top_right",
+    "margin": 40,
+    "opacity": 0.8,
+    "maxWidth": 120
+  }
+}

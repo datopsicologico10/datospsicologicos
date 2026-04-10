@@ -1,0 +1,34 @@
+{
+  "title": "sesgo_confirmacion_cerebro_miente",
+  "topic": "cognitive_biases",
+  "hook": "Tu cerebro lleva años ocultándote información real para que siempre tengas razón.",
+  "claim": "El 80% de las personas rechaza evidencia comprobada si contradice lo que ya creen. Los estudios llaman a esto sesgo de confirmación.",
+  "explanation": "Y tú lo haces cada día sin darte cuenta. Cuando buscas algo en Google, solo lees los resultados que confirman tu opinión. Cuando alguien te critica, inmediatamente buscas por qué está equivocado. Tu cerebro descarta la información que lo incomoda porque mantener tu identidad le resulta más seguro que descubrir la verdad. Es increíble: nunca ves el mundo real, solo la versión que tu mente acepta.",
+  "cta": "¿En qué tema crees que tu cerebro te está manipulando ahora mismo? Comenta abajo 👇",
+  "psychologicalFact": "El sesgo de confirmación hace que el cerebro filtre y descarte información que contradice las creencias propias para proteger la identidad.",
+  "viralTrigger": "sorpresa",
+  "durationSeconds": 49,
+  "keywords": [
+    "cerebro_mentira",
+    "sesgo_confirmacion",
+    "percepcion_distorsionada"
+  ],
+  "emotionalTrigger": "curiosity",
+  "hashtags": [
+    "#psicologia",
+    "#mentalidad",
+    "#cerebro",
+    "#hechos",
+    "#viral"
+  ],
+  "viralityScore": 74,
+  "viralityBreakdown": {
+    "hookStrength": 5,
+    "emotionalTrigger": 25,
+    "relatability": 19,
+    "loopPotential": 15,
+    "durationBonus": 10
+  },
+  "approved": true,
+  "estimatedWords": 115
+}

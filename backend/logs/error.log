@@ -1,0 +1,6 @@
+2026-04-10 20:28:49 [error]: Script generation attempt 1 failed: 401 {"type":"error","error":{"type":"authentication_error","message":"invalid x-api-key"},"request_id":"req_011CZvZgxiRkiQW6Tykm5owx"}
+2026-04-10 20:28:51 [error]: Script generation attempt 2 failed: 401 {"type":"error","error":{"type":"authentication_error","message":"invalid x-api-key"},"request_id":"req_011CZvZh7r6fzGb37DHJ63YQ"}
+2026-04-10 20:28:55 [error]: Script generation attempt 3 failed: 401 {"type":"error","error":{"type":"authentication_error","message":"invalid x-api-key"},"request_id":"req_011CZvZhRcgnF9GMMiQseEzQ"}
+2026-04-10 20:59:45 [error]: Edge TTS WebSocket error: Unexpected server response: 403
+2026-04-10 22:15:54 [error]: FFmpeg error: ffmpeg exited with code 1: Conversion failed!
+

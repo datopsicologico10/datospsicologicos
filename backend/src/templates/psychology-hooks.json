@@ -1,0 +1,161 @@
+{
+  "hooks": [
+    {
+      "id": "hook_001",
+      "text": "La gente que hace esto en secreto tiene el doble de confianza",
+      "topic": "body_language",
+      "emotionalTrigger": "curiosity",
+      "estimatedScore": 82
+    },
+    {
+      "id": "hook_002",
+      "text": "Nunca confíes en alguien que hace estas 3 cosas",
+      "topic": "relationships",
+      "emotionalTrigger": "fear",
+      "estimatedScore": 88
+    },
+    {
+      "id": "hook_003",
+      "text": "Tu lenguaje corporal revela esto sin que lo sepas",
+      "topic": "body_language",
+      "emotionalTrigger": "awe",
+      "estimatedScore": 79
+    },
+    {
+      "id": "hook_004",
+      "text": "El 97% de las personas hace esto cuando miente",
+      "topic": "body_language",
+      "emotionalTrigger": "curiosity",
+      "estimatedScore": 91
+    },
+    {
+      "id": "hook_005",
+      "text": "Si alguien hace esto contigo, te está manipulando",
+      "topic": "relationships",
+      "emotionalTrigger": "fear",
+      "estimatedScore": 86
+    },
+    {
+      "id": "hook_006",
+      "text": "La forma en que caminas dice esto de tu personalidad",
+      "topic": "body_language",
+      "emotionalTrigger": "curiosity",
+      "estimatedScore": 77
+    },
+    {
+      "id": "hook_007",
+      "text": "Las personas inteligentes nunca hacen estas 4 cosas",
+      "topic": "cognitive_biases",
+      "emotionalTrigger": "validation",
+      "estimatedScore": 84
+    },
+    {
+      "id": "hook_008",
+      "text": "Este sesgo cognitivo te hace tomar malas decisiones",
+      "topic": "cognitive_biases",
+      "emotionalTrigger": "awe",
+      "estimatedScore": 75
+    },
+    {
+      "id": "hook_009",
+      "text": "La verdad sobre la primera impresión que nadie te dice",
+      "topic": "first_impressions",
+      "emotionalTrigger": "curiosity",
+      "estimatedScore": 80
+    },
+    {
+      "id": "hook_010",
+      "text": "Si notas esto en alguien, aléjate inmediatamente",
+      "topic": "relationships",
+      "emotionalTrigger": "fear",
+      "estimatedScore": 89
+    },
+    {
+      "id": "hook_011",
+      "text": "El silencio dice más que las palabras: aquí está la prueba",
+      "topic": "communication",
+      "emotionalTrigger": "curiosity",
+      "estimatedScore": 78
+    },
+    {
+      "id": "hook_012",
+      "text": "¿Por qué las personas exitosas duermen en este horario?",
+      "topic": "habits",
+      "emotionalTrigger": "curiosity",
+      "estimatedScore": 76
+    },
+    {
+      "id": "hook_013",
+      "text": "El efecto Dunning-Kruger destruye más vidas de lo que crees",
+      "topic": "cognitive_biases",
+      "emotionalTrigger": "fear",
+      "estimatedScore": 83
+    },
+    {
+      "id": "hook_014",
+      "text": "Tu jefe te evalúa con esto en los primeros 7 segundos",
+      "topic": "workplace",
+      "emotionalTrigger": "urgency",
+      "estimatedScore": 87
+    },
+    {
+      "id": "hook_015",
+      "text": "Las personas narcisistas siempre usan estas 5 frases",
+      "topic": "relationships",
+      "emotionalTrigger": "fear",
+      "estimatedScore": 92
+    },
+    {
+      "id": "hook_016",
+      "text": "Nadie te habla de este truco psicológico para caer bien",
+      "topic": "social_skills",
+      "emotionalTrigger": "curiosity",
+      "estimatedScore": 85
+    },
+    {
+      "id": "hook_017",
+      "text": "Tu cerebro te miente exactamente de esta forma cada día",
+      "topic": "cognitive_biases",
+      "emotionalTrigger": "awe",
+      "estimatedScore": 81
+    },
+    {
+      "id": "hook_018",
+      "text": "Si alguien te mira así, te está ocultando algo importante",
+      "topic": "body_language",
+      "emotionalTrigger": "fear",
+      "estimatedScore": 88
+    },
+    {
+      "id": "hook_019",
+      "text": "El ancla mental que te impide tomar mejores decisiones",
+      "topic": "cognitive_biases",
+      "emotionalTrigger": "validation",
+      "estimatedScore": 74
+    },
+    {
+      "id": "hook_020",
+      "text": "¿Por qué la gente poderosa habla tan despacio?",
+      "topic": "communication",
+      "emotionalTrigger": "curiosity",
+      "estimatedScore": 82
+    }
+  ],
+  "topics": [
+    "body_language",
+    "cognitive_biases",
+    "relationships",
+    "workplace",
+    "first_impressions",
+    "social_skills",
+    "habits",
+    "communication"
+  ],
+  "emotionalTriggers": [
+    "curiosity",
+    "fear",
+    "awe",
+    "validation",
+    "urgency"
+  ]
+}

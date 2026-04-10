@@ -1,0 +1,213 @@
+2026-04-10 20:28:49 [info]: Generating script | Topic: cognitive_biases | Hook: hook_008
+2026-04-10 20:28:49 [debug]: Claude API call — attempt 1/3
+2026-04-10 20:28:49 [error]: Script generation attempt 1 failed: 401 {"type":"error","error":{"type":"authentication_error","message":"invalid x-api-key"},"request_id":"req_011CZvZgxiRkiQW6Tykm5owx"}
+2026-04-10 20:28:51 [debug]: Claude API call — attempt 2/3
+2026-04-10 20:28:51 [error]: Script generation attempt 2 failed: 401 {"type":"error","error":{"type":"authentication_error","message":"invalid x-api-key"},"request_id":"req_011CZvZh7r6fzGb37DHJ63YQ"}
+2026-04-10 20:28:55 [debug]: Claude API call — attempt 3/3
+2026-04-10 20:28:55 [error]: Script generation attempt 3 failed: 401 {"type":"error","error":{"type":"authentication_error","message":"invalid x-api-key"},"request_id":"req_011CZvZhRcgnF9GMMiQseEzQ"}
+2026-04-10 20:59:34 [info]: Generating script | Topic: cognitive_biases | Hook: hook_017
+2026-04-10 20:59:34 [debug]: Claude API call — attempt 1/3
+2026-04-10 20:59:44 [info]: Virality score: 51/100 | Approved: false
+2026-04-10 20:59:44 [info]: Script generated: score=51 approved=false
+2026-04-10 20:59:44 [info]: Edge TTS | Voice: es-ES-AlvaroNeural | RequestId: 1c034ffd2baf42ef8b20e78d5f09d6b8
+2026-04-10 20:59:45 [error]: Edge TTS WebSocket error: Unexpected server response: 403
+2026-04-10 21:00:37 [info]: Generating script | Topic: cognitive_biases | Hook: hook_013
+2026-04-10 21:00:37 [debug]: Claude API call — attempt 1/3
+2026-04-10 21:00:49 [info]: Virality score: 51/100 | Approved: false
+2026-04-10 21:00:49 [info]: Script generated: score=51 approved=false
+2026-04-10 21:00:49 [info]: Edge TTS | Voice: es-ES-AlvaroNeural | chars: 1263
+2026-04-10 21:00:57 [info]: Edge TTS: saved 471 KB, ~93.43s
+2026-04-10 21:01:10 [info]: Generating script | Topic: cognitive_biases | Hook: hook_007
+2026-04-10 21:01:10 [debug]: Claude API call — attempt 1/3
+2026-04-10 21:01:21 [info]: Virality score: 53/100 | Approved: false
+2026-04-10 21:01:21 [info]: Script generated: score=53 approved=false
+2026-04-10 21:01:21 [info]: Edge TTS | Voice: es-ES-AlvaroNeural | chars: 1143
+2026-04-10 21:01:30 [info]: Edge TTS: saved 444 KB, ~83.14s
+2026-04-10 21:01:30 [info]: Rendering video | Theme: Dark Neural | Duration: 83.14s
+2026-04-10 21:01:30 [debug]: Generated 194 subtitle entries for 83.14s audio
+2026-04-10 21:01:31 [debug]: FFmpeg: ffmpeg -f lavfi -t 83.14 -i color=black:s=1080x1920:r=60 -i C:\Users\Erik\Desktop\Generador_videos\output\test_ad0cf496\...
+2026-04-10 21:06:35 [info]: Video rendered: C:\Users\Erik\Desktop\Generador_videos\output\test_ad0cf496\output.mp4
+2026-04-10 21:11:00 [info]: Generating script | Topic: cognitive_biases | Hook: hook_019
+2026-04-10 21:11:00 [debug]: Claude API call
+2026-04-10 21:11:06 [info]: Virality score: 46/100 | Approved: false
+2026-04-10 21:11:06 [info]: Script OK | words=86 | duration=37s | score=46
+2026-04-10 21:11:06 [info]: Edge TTS | Voice: es-ES-AlvaroNeural | chars: 518
+2026-04-10 21:11:10 [info]: Edge TTS: saved 238 KB, ~36.86s
+2026-04-10 21:11:10 [info]: Rendering video | Theme: Dark Neural | Duration: 36.86s
+2026-04-10 21:11:10 [debug]: Generated 86 subtitle entries for 36.86s audio
+2026-04-10 21:11:10 [debug]: FFmpeg: ffmpeg -f lavfi -t 36.86 -i color=black:s=1080x1920:r=60 -i C:\Users\Erik\Desktop\Generador_videos\output\test_0cd5285b\...
+2026-04-10 21:14:15 [info]: Video rendered: C:\Users\Erik\Desktop\Generador_videos\output\test_0cd5285b\output.mp4
+2026-04-10 21:21:41 [info]: Generating script | Topic: cognitive_biases | Hook: hook_019
+2026-04-10 21:21:41 [debug]: Claude API call
+2026-04-10 21:21:48 [info]: Virality score: 37/100 | Approved: false
+2026-04-10 21:21:48 [info]: Script OK | words=85 | duration=36s | score=37
+2026-04-10 21:21:48 [info]: Edge TTS | Voice: es-ES-AlvaroNeural | chars: 495
+2026-04-10 21:21:51 [info]: Edge TTS: saved 194 KB, ~36.43s
+2026-04-10 21:21:51 [info]: Real audio duration: 33.07s (estimated was 36.43s)
+2026-04-10 21:21:51 [info]: Fetching Pexels video for: "brain thinking mind abstract"
+2026-04-10 21:21:52 [info]: Downloading Pexels video: https://videos.pexels.com/video-files/35003022/14828954_1080_1920_30fps.mp4
+2026-04-10 21:21:52 [info]: Pexels video saved: C:\Users\Erik\Desktop\Generador_videos\assets\stock-footage\cognitive_biases_bg.mp4
+2026-04-10 21:21:52 [info]: Rendering | Theme: Dark Neural | Background: Pexels | Subtitles: 22 blocks
+2026-04-10 21:21:52 [debug]: FFmpeg: ffmpeg -stream_loop -1 -t 33.072 -i C:\Users\Erik\Desktop\Generador_videos\assets\stock-footage\cogn...
+2026-04-10 21:21:53 [debug]: FFmpeg: 5%
+2026-04-10 21:21:54 [debug]: FFmpeg: 16%
+2026-04-10 21:21:54 [debug]: FFmpeg: 27%
+2026-04-10 21:21:55 [debug]: FFmpeg: 39%
+2026-04-10 21:21:55 [debug]: FFmpeg: 51%
+2026-04-10 21:21:56 [debug]: FFmpeg: 62%
+2026-04-10 21:21:56 [debug]: FFmpeg: 74%
+2026-04-10 21:21:57 [debug]: FFmpeg: 86%
+2026-04-10 21:21:57 [debug]: FFmpeg: 98%
+2026-04-10 21:21:58 [debug]: FFmpeg: 110%
+2026-04-10 21:21:58 [debug]: FFmpeg: 122%
+2026-04-10 21:21:59 [debug]: FFmpeg: 134%
+2026-04-10 21:21:59 [debug]: FFmpeg: 146%
+2026-04-10 21:22:00 [debug]: FFmpeg: 157%
+2026-04-10 21:22:01 [debug]: FFmpeg: 169%
+2026-04-10 21:22:01 [debug]: FFmpeg: 179%
+2026-04-10 21:22:02 [debug]: FFmpeg: 190%
+2026-04-10 21:22:02 [debug]: FFmpeg: 202%
+2026-04-10 21:22:03 [debug]: FFmpeg: 215%
+2026-04-10 21:22:03 [debug]: FFmpeg: 225%
+2026-04-10 21:22:04 [debug]: FFmpeg: 236%
+2026-04-10 21:22:04 [debug]: FFmpeg: 246%
+2026-04-10 21:22:05 [debug]: FFmpeg: 257%
+2026-04-10 21:22:05 [debug]: FFmpeg: 266%
+2026-04-10 21:22:06 [debug]: FFmpeg: 277%
+2026-04-10 21:22:06 [debug]: FFmpeg: 288%
+2026-04-10 21:22:07 [debug]: FFmpeg: 301%
+2026-04-10 21:22:07 [debug]: FFmpeg: 313%
+2026-04-10 21:22:07 [debug]: FFmpeg: 331%
+2026-04-10 21:22:08 [info]: Video rendered: C:\Users\Erik\Desktop\Generador_videos\output\test_e318b84d\output.mp4
+2026-04-10 21:22:58 [info]: Generating script | Topic: cognitive_biases | Hook: hook_017
+2026-04-10 21:22:58 [debug]: Claude API call
+2026-04-10 21:23:05 [info]: Virality score: 62/100 | Approved: true
+2026-04-10 21:23:05 [info]: Script OK | words=116 | duration=50s | score=62
+2026-04-10 21:23:05 [info]: Edge TTS | Voice: es-ES-AlvaroNeural | chars: 690
+2026-04-10 21:23:11 [info]: Edge TTS: saved 273 KB, ~49.71s
+2026-04-10 21:23:11 [info]: Real audio duration: 46.51s (estimated was 49.71s)
+2026-04-10 21:23:11 [info]: Using cached Pexels video: C:\Users\Erik\Desktop\Generador_videos\assets\stock-footage\cognitive_biases_bg.mp4
+2026-04-10 21:23:11 [info]: Rendering | Theme: Dark Neural | Background: Pexels | Subtitles: 31 blocks
+2026-04-10 21:23:11 [debug]: FFmpeg: ffmpeg -stream_loop -1 -t 46.512 -i C:\Users\Erik\Desktop\Generador_videos\assets\stock-footage\cogn...
+2026-04-10 21:23:12 [debug]: FFmpeg: 3%
+2026-04-10 21:23:13 [debug]: FFmpeg: 15%
+2026-04-10 21:23:13 [debug]: FFmpeg: 26%
+2026-04-10 21:23:14 [debug]: FFmpeg: 36%
+2026-04-10 21:23:14 [debug]: FFmpeg: 48%
+2026-04-10 21:23:15 [debug]: FFmpeg: 57%
+2026-04-10 21:23:15 [debug]: FFmpeg: 70%
+2026-04-10 21:23:16 [debug]: FFmpeg: 82%
+2026-04-10 21:23:16 [debug]: FFmpeg: 93%
+2026-04-10 21:23:17 [debug]: FFmpeg: 104%
+2026-04-10 21:23:17 [debug]: FFmpeg: 114%
+2026-04-10 21:23:18 [debug]: FFmpeg: 126%
+2026-04-10 21:23:18 [debug]: FFmpeg: 138%
+2026-04-10 21:23:19 [debug]: FFmpeg: 146%
+2026-04-10 21:23:19 [debug]: FFmpeg: 158%
+2026-04-10 21:23:20 [debug]: FFmpeg: 169%
+2026-04-10 21:23:20 [debug]: FFmpeg: 181%
+2026-04-10 21:23:21 [debug]: FFmpeg: 191%
+2026-04-10 21:23:21 [debug]: FFmpeg: 203%
+2026-04-10 21:23:22 [debug]: FFmpeg: 214%
+2026-04-10 21:23:22 [debug]: FFmpeg: 225%
+2026-04-10 21:23:23 [debug]: FFmpeg: 238%
+2026-04-10 21:23:23 [debug]: FFmpeg: 248%
+2026-04-10 21:23:24 [debug]: FFmpeg: 260%
+2026-04-10 21:23:24 [debug]: FFmpeg: 271%
+2026-04-10 21:23:25 [debug]: FFmpeg: 282%
+2026-04-10 21:23:25 [debug]: FFmpeg: 293%
+2026-04-10 21:23:26 [debug]: FFmpeg: 302%
+2026-04-10 21:23:26 [debug]: FFmpeg: 314%
+2026-04-10 21:23:27 [debug]: FFmpeg: 326%
+2026-04-10 21:23:27 [debug]: FFmpeg: 337%
+2026-04-10 21:23:28 [debug]: FFmpeg: 347%
+2026-04-10 21:23:28 [debug]: FFmpeg: 358%
+2026-04-10 21:23:29 [debug]: FFmpeg: 369%
+2026-04-10 21:23:29 [debug]: FFmpeg: 381%
+2026-04-10 21:23:30 [debug]: FFmpeg: 392%
+2026-04-10 21:23:30 [debug]: FFmpeg: 403%
+2026-04-10 21:23:31 [debug]: FFmpeg: 413%
+2026-04-10 21:23:31 [debug]: FFmpeg: 425%
+2026-04-10 21:23:32 [debug]: FFmpeg: 436%
+2026-04-10 21:23:32 [debug]: FFmpeg: 446%
+2026-04-10 21:23:33 [debug]: FFmpeg: 465%
+2026-04-10 21:23:33 [info]: Video rendered: C:\Users\Erik\Desktop\Generador_videos\output\test_7b1978bb\output.mp4
+2026-04-10 21:28:48 [info]: Generating script | Topic: cognitive_biases | Hook: hook_013
+2026-04-10 21:28:48 [debug]: Claude API call
+2026-04-10 21:28:55 [info]: Virality score: 70/100 | Approved: true
+2026-04-10 21:28:55 [info]: Script OK | words=112 | duration=48s | score=70
+2026-04-10 21:28:55 [info]: Edge TTS | Voice: es-MX-DaliaNeural | chars: 738
+2026-04-10 21:28:58 [info]: Edge TTS: saved 297 KB, ~48s
+2026-04-10 21:28:58 [info]: Real audio duration: 50.71s (estimated was 48s)
+2026-04-10 21:28:58 [info]: Using cached Pexels video: C:\Users\Erik\Desktop\Generador_videos\assets\stock-footage\cognitive_biases_bg.mp4
+2026-04-10 21:28:58 [info]: Rendering | Theme: Dark Neural | Background: Pexels | Subtitles: 30 blocks
+2026-04-10 21:28:58 [debug]: FFmpeg: ffmpeg -stream_loop -1 -t 50.712 -i C:\Users\Erik\Desktop\Generador_videos\assets\stock-footage\cogn...
+2026-04-10 21:28:59 [debug]: FFmpeg: 6%
+2026-04-10 21:29:00 [debug]: FFmpeg: 16%
+2026-04-10 21:29:00 [debug]: FFmpeg: 26%
+2026-04-10 21:29:01 [debug]: FFmpeg: 37%
+2026-04-10 21:29:01 [debug]: FFmpeg: 47%
+2026-04-10 21:29:02 [debug]: FFmpeg: 57%
+2026-04-10 21:29:02 [debug]: FFmpeg: 63%
+2026-04-10 21:29:03 [debug]: FFmpeg: 65%
+2026-04-10 21:29:03 [debug]: FFmpeg: 71%
+2026-04-10 21:29:04 [debug]: FFmpeg: 77%
+2026-04-10 21:29:04 [debug]: FFmpeg: 83%
+2026-04-10 21:29:05 [debug]: FFmpeg: 91%
+2026-04-10 21:29:05 [debug]: FFmpeg: 99%
+2026-04-10 21:29:06 [debug]: FFmpeg: 107%
+2026-04-10 21:29:06 [debug]: FFmpeg: 117%
+2026-04-10 21:29:07 [debug]: FFmpeg: 126%
+2026-04-10 21:29:07 [debug]: FFmpeg: 138%
+2026-04-10 21:29:08 [debug]: FFmpeg: 145%
+2026-04-10 21:29:09 [debug]: FFmpeg: 153%
+2026-04-10 21:29:09 [debug]: FFmpeg: 161%
+2026-04-10 21:29:10 [debug]: FFmpeg: 172%
+2026-04-10 21:29:10 [debug]: FFmpeg: 182%
+2026-04-10 21:29:11 [debug]: FFmpeg: 192%
+2026-04-10 21:29:11 [debug]: FFmpeg: 201%
+2026-04-10 21:29:12 [debug]: FFmpeg: 209%
+2026-04-10 21:29:12 [debug]: FFmpeg: 219%
+2026-04-10 21:29:13 [debug]: FFmpeg: 229%
+2026-04-10 21:29:13 [debug]: FFmpeg: 239%
+2026-04-10 21:29:14 [debug]: FFmpeg: 250%
+2026-04-10 21:29:14 [debug]: FFmpeg: 260%
+2026-04-10 21:29:15 [debug]: FFmpeg: 269%
+2026-04-10 21:29:15 [debug]: FFmpeg: 281%
+2026-04-10 21:29:16 [debug]: FFmpeg: 292%
+2026-04-10 21:29:16 [debug]: FFmpeg: 303%
+2026-04-10 21:29:17 [debug]: FFmpeg: 313%
+2026-04-10 21:29:17 [debug]: FFmpeg: 324%
+2026-04-10 21:29:18 [debug]: FFmpeg: 336%
+2026-04-10 21:29:18 [debug]: FFmpeg: 347%
+2026-04-10 21:29:19 [debug]: FFmpeg: 357%
+2026-04-10 21:29:19 [debug]: FFmpeg: 369%
+2026-04-10 21:29:20 [debug]: FFmpeg: 381%
+2026-04-10 21:29:20 [debug]: FFmpeg: 391%
+2026-04-10 21:29:21 [debug]: FFmpeg: 399%
+2026-04-10 21:29:21 [debug]: FFmpeg: 409%
+2026-04-10 21:29:22 [debug]: FFmpeg: 421%
+2026-04-10 21:29:22 [debug]: FFmpeg: 432%
+2026-04-10 21:29:23 [debug]: FFmpeg: 443%
+2026-04-10 21:29:23 [debug]: FFmpeg: 454%
+2026-04-10 21:29:24 [debug]: FFmpeg: 464%
+2026-04-10 21:29:24 [debug]: FFmpeg: 475%
+2026-04-10 21:29:25 [debug]: FFmpeg: 482%
+2026-04-10 21:29:26 [debug]: FFmpeg: 507%
+2026-04-10 21:29:26 [info]: Video rendered: C:\Users\Erik\Desktop\Generador_videos\output\test_32fe9121\output.mp4
+2026-04-10 21:35:32 [info]: Edge TTS | Voice: es-ES-ElviraNeural | chars: 509
+2026-04-10 21:35:34 [info]: Edge TTS: saved 189 KB, ~36.43s
+2026-04-10 22:15:32 [info]: Generating script | Topic: cognitive_biases | Hook: hook_017
+2026-04-10 22:15:32 [debug]: Claude API call
+2026-04-10 22:15:46 [info]: Virality score: 74/100 | Approved: true
+2026-04-10 22:15:46 [info]: Script OK | words=115 | duration=49s | score=74 | trigger=sorpresa
+2026-04-10 22:15:46 [info]: Edge TTS | Voice: es-ES-ElviraNeural | chars: 702
+2026-04-10 22:15:48 [info]: Edge TTS: saved 277 KB, ~49.29s
+2026-04-10 22:15:49 [info]: Real audio duration: 47.21s (estimated was 49.29s)
+2026-04-10 22:15:49 [info]: Fetching Pexels video | query: "cerebro_mentira sesgo_confirmacion percepcion_distorsionada" | page: 3
+2026-04-10 22:15:50 [info]: Downloading Pexels video 7274602: "cerebro_mentira sesgo_confirmacion percepcion_distorsionada" p3
+2026-04-10 22:15:51 [info]: Saved: pexels_7274602.mp4
+2026-04-10 22:15:51 [info]: Rendering | Theme: Dark Neural | Background: Pexels | Subtitles: 30 blocks
+2026-04-10 22:15:52 [debug]: FFmpeg: ffmpeg -stream_loop -1 -t 47.208 -i C:\Users\Erik\Desktop\Generador_videos\assets\stock-footage\pexe...
+2026-04-10 22:15:54 [error]: FFmpeg error: ffmpeg exited with code 1: Conversion failed!
+
