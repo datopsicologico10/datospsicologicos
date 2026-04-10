@@ -7,7 +7,7 @@
 require('dotenv').config();
 const axios = require('axios');
 const fs = require('fs');
-const FormData = require('form-data');
+const path = require('path');
 const logger = require('../utils/logger');
 
 // Hashtags base siempre incluidos
@@ -259,39 +259,50 @@ async function getYouTubeAccessToken() {
 // ─────────────────────────────────────────────
 
 /**
- * Publica en todas las plataformas con los delays configurados.
- * TikTok → Instagram (+30 min) → YouTube (+60 min)
+ * Publica en todas las plataformas disponibles (según tokens configurados).
+ * Solo intenta plataformas con credenciales reales (no "RELLENAR").
  */
 async function publishAll(videoPath, script, videoUrl = null) {
   const results = [];
   const errors = [];
 
-  // TikTok (inmediato)
-  try {
-    const tiktokResult = await publishToTikTok(videoPath, script);
-    results.push(tiktokResult);
-  } catch (err) {
-    errors.push({ platform: 'tiktok', error: err.message });
+  // TikTok — solo si el token está configurado
+  const tiktokToken = process.env.TIKTOK_ACCESS_TOKEN;
+  if (tiktokToken && tiktokToken !== 'RELLENAR') {
+    try {
+      const tiktokResult = await publishToTikTok(videoPath, script);
+      results.push(tiktokResult);
+    } catch (err) {
+      errors.push({ platform: 'tiktok', error: err.message });
+    }
+  } else {
+    logger.warn('TikTok: TIKTOK_ACCESS_TOKEN no configurado — saltando');
   }
 
-  // Instagram (30 min después de TikTok)
-  if (videoUrl) {
-    await sleep(30 * 60 * 1000);
+  // Instagram — solo si hay URL pública y token configurado
+  const igToken = process.env.INSTAGRAM_ACCESS_TOKEN;
+  if (videoUrl && igToken && igToken !== 'RELLENAR') {
     try {
       const igResult = await publishToInstagram(videoUrl, script);
       results.push(igResult);
     } catch (err) {
       errors.push({ platform: 'instagram', error: err.message });
     }
+  } else if (!videoUrl || !igToken || igToken === 'RELLENAR') {
+    logger.warn('Instagram: token no configurado o sin videoUrl — saltando');
   }
 
-  // YouTube (60 min después de TikTok)
-  await sleep(30 * 60 * 1000);
-  try {
-    const ytResult = await publishToYouTube(videoPath, script);
-    results.push(ytResult);
-  } catch (err) {
-    errors.push({ platform: 'youtube', error: err.message });
+  // YouTube — solo si hay refresh token configurado
+  const ytRefresh = process.env.YOUTUBE_REFRESH_TOKEN;
+  if (ytRefresh && ytRefresh !== 'RELLENAR') {
+    try {
+      const ytResult = await publishToYouTube(videoPath, script);
+      results.push(ytResult);
+    } catch (err) {
+      errors.push({ platform: 'youtube', error: err.message });
+    }
+  } else {
+    logger.warn('YouTube: YOUTUBE_REFRESH_TOKEN no configurado — saltando');
   }
 
   return { results, errors };
@@ -300,8 +311,6 @@ async function publishAll(videoPath, script, videoUrl = null) {
 function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
-
-const path = require('path');
 
 module.exports = {
   publishToTikTok,

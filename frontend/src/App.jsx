@@ -1,12 +1,14 @@
 import { useState } from 'react';
-import { Brain, BarChart2, Video, Calendar } from 'lucide-react';
+import { Brain, BarChart2, Video, Calendar, Film } from 'lucide-react';
 import AnalyticsDashboard from './components/AnalyticsDashboard';
 import VideoQueue from './components/VideoQueue';
 import ContentCalendar from './components/ContentCalendar';
+import VideoList from './components/VideoList';
 
 const TABS = [
   { id: 'analytics', label: 'Analytics', icon: BarChart2 },
   { id: 'queue', label: 'Cola de videos', icon: Video },
+  { id: 'videos', label: 'Vídeos', icon: Film },
   { id: 'calendar', label: 'Calendario', icon: Calendar },
 ];
 
@@ -23,7 +25,7 @@ export default function App() {
               <Brain size={16} className="text-white" />
             </div>
             <div>
-              <p className="text-sm font-bold leading-none">Psychology Shorts</p>
+              <p className="text-sm font-bold leading-none">Datos Psicológicos</p>
               <p className="text-xs text-slate-400 leading-none mt-0.5">Automation Dashboard</p>
             </div>
           </div>
@@ -59,6 +61,7 @@ export default function App() {
         <main className="pb-12">
           {activeTab === 'analytics' && <AnalyticsDashboard />}
           {activeTab === 'queue' && <VideoQueue />}
+          {activeTab === 'videos' && <VideoList />}
           {activeTab === 'calendar' && <ContentCalendar />}
         </main>
       </div>

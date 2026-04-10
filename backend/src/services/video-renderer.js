@@ -36,6 +36,11 @@ const TOPIC_QUERIES = {
   social_skills:    'social people networking smiling',
   habits:           'morning routine motivation success',
   communication:    'people conversation talking listen',
+  emotions:         'person feeling emotional expression face',
+  memory:           'brain memory recall thinking neurons',
+  motivation:       'success achievement motivation running energy',
+  dark_psychology:  'shadow mystery manipulation psychology dark',
+  self_esteem:      'confidence self worth mirror reflection',
 };
 
 // ─────────────────────────────────────────────
@@ -162,7 +167,7 @@ function buildSubtitleBlocks(script, realDuration) {
 
     const sectionDuration = realDuration * section.ratio;
     const words = text.split(/\s+/);
-    const WORDS_PER_BLOCK = 4;
+    const WORDS_PER_BLOCK = 3;
     const numBlocks = Math.ceil(words.length / WORDS_PER_BLOCK);
     const blockDuration = sectionDuration / numBlocks;
 
@@ -195,22 +200,30 @@ function buildDrawtextFilters(blocks) {
   const fontDir = path.resolve('./assets/fonts');
   const fontFile = path.join(fontDir, 'Montserrat-Bold.ttf');
   const hasFont = fs.existsSync(fontFile);
+  const FADE = 0.12; // segundos de fade in/out del texto
 
   return blocks.map((block) => {
     const t = `between(t,${block.start},${block.end})`;
-    const fontSize = block.isHook ? 82 : 72;
+    const fontSize = block.isHook ? 90 : 78;
     const color = block.isHook ? 'yellow' : 'white';
     const fontPart = hasFont
       ? `fontfile='${fontFile.replace(/\\/g, '/')}':fontsize=${fontSize}`
       : `fontsize=${fontSize}`;
 
+    // Alpha fade in/out suave para cada bloque
+    const alphaExpr =
+      `if(lt(t-${block.start},${FADE}),(t-${block.start})/${FADE},` +
+      `if(gt(t,${block.end}-${FADE}),(${block.end}-t)/${FADE},1))`;
+
     return (
       `drawtext=${fontPart}:` +
       `text='${escapeDrawtext(block.text)}':` +
       `fontcolor=${color}:` +
-      `bordercolor=black:borderw=5:` +
-      `x=(w-text_w)/2:y=h*0.72:` +
-      `box=1:boxcolor=black@0.5:boxborderw=14:` +
+      `alpha='${alphaExpr}':` +
+      `shadowcolor=black@0.9:shadowx=3:shadowy=3:` +
+      `bordercolor=black:borderw=6:` +
+      `x=(w-text_w)/2:y=h*0.70:` +
+      `box=1:boxcolor=black@0.45:boxborderw=16:` +
       `enable='${t}'`
     );
   }).join(',');

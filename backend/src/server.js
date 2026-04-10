@@ -121,6 +121,34 @@ app.get('/api/hooks', (_req, res) => res.json({ ok: true, data: hooksData }));
 app.get('/api/themes', (_req, res) => res.json({ ok: true, data: themesData }));
 app.get('/api/voices', (_req, res) => res.json({ ok: true, data: getSpanishVoices() }));
 
+// Subir video local a YouTube manualmente
+app.post('/api/videos/upload-youtube', async (req, res) => {
+  try {
+    const { videoId } = req.body;
+    if (!videoId) return res.status(400).json({ ok: false, error: 'videoId is required' });
+
+    const outputDir = path.resolve(process.env.OUTPUT_DIR || './output');
+    const videoPath = path.join(outputDir, videoId, 'output.mp4');
+    const scriptPath = path.join(outputDir, videoId, 'script.json');
+
+    if (!fs.existsSync(videoPath)) {
+      return res.status(404).json({ ok: false, error: 'Video not found' });
+    }
+
+    const script = fs.existsSync(scriptPath)
+      ? JSON.parse(fs.readFileSync(scriptPath, 'utf8'))
+      : { hook: videoId, topic: 'psychology', hashtags: [] };
+
+    const { publishToYouTube } = require('./services/publisher');
+    const result = await publishToYouTube(videoPath, script);
+
+    res.json({ ok: true, data: result });
+  } catch (err) {
+    logger.error(`YouTube upload error: ${err.message}`);
+    res.status(500).json({ ok: false, error: err.message });
+  }
+});
+
 // Lista de videos en output/
 app.get('/api/videos/local', (_req, res) => {
   const outputDir = path.resolve(process.env.OUTPUT_DIR || './output');

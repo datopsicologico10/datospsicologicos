@@ -61,7 +61,7 @@ FORMATO DE RESPUESTA — JSON puro, sin markdown, sin texto extra
 ════════════════════════════════════════
 {
   "title": "slug_identificador_interno",
-  "topic": "body_language|cognitive_biases|relationships|workplace|first_impressions|social_skills|habits|communication",
+  "topic": "body_language|cognitive_biases|relationships|workplace|first_impressions|social_skills|habits|communication|emotions|memory|motivation|dark_psychology|self_esteem",
   "hook": "texto hook (15-20 palabras)",
   "claim": "texto claim (20-30 palabras)",
   "explanation": "texto explicación (60-75 palabras)",
