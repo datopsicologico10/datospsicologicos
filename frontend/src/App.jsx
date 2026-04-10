@@ -1,14 +1,16 @@
 import { useState } from 'react';
-import { Brain, BarChart2, Video, Calendar, Film } from 'lucide-react';
+import { Brain, BarChart2, Video, Calendar, Film, FlaskConical } from 'lucide-react';
 import AnalyticsDashboard from './components/AnalyticsDashboard';
 import VideoQueue from './components/VideoQueue';
 import ContentCalendar from './components/ContentCalendar';
 import VideoList from './components/VideoList';
+import ResearchInsights from './components/ResearchInsights';
 
 const TABS = [
   { id: 'analytics', label: 'Analytics', icon: BarChart2 },
-  { id: 'queue', label: 'Cola de videos', icon: Video },
+  { id: 'queue', label: 'Cola', icon: Video },
   { id: 'videos', label: 'Vídeos', icon: Film },
+  { id: 'research', label: 'Research', icon: FlaskConical },
   { id: 'calendar', label: 'Calendario', icon: Calendar },
 ];
 
@@ -62,6 +64,7 @@ export default function App() {
           {activeTab === 'analytics' && <AnalyticsDashboard />}
           {activeTab === 'queue' && <VideoQueue />}
           {activeTab === 'videos' && <VideoList />}
+          {activeTab === 'research' && <ResearchInsights />}
           {activeTab === 'calendar' && <ContentCalendar />}
         </main>
       </div>

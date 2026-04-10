@@ -168,6 +168,20 @@ app.get('/api/videos/local', (_req, res) => {
   res.json({ ok: true, data: videos });
 });
 
+// Devuelve los últimos insights generados
+app.get('/api/research/insights', (_req, res) => {
+  const insightsPath = path.resolve('./data/insights.json');
+  if (!fs.existsSync(insightsPath)) {
+    return res.json({ ok: true, data: null, message: 'Sin insights todavía. Ejecuta node scripts/viral-research.js' });
+  }
+  try {
+    const insights = JSON.parse(fs.readFileSync(insightsPath, 'utf8'));
+    res.json({ ok: true, data: insights });
+  } catch (err) {
+    res.status(500).json({ ok: false, error: err.message });
+  }
+});
+
 // ─────────────────────────────────────────────
 //  ERROR HANDLER
 // ─────────────────────────────────────────────
